@@ -92,10 +92,15 @@ header nav{
 .contenido{
     position: absolute;
     margin-top: 80px;
+    width: 100%;
 }
+
+/* Duda de las columnas de imagenes ya modifique verifique que sean 5 columnas pero solo me muestra 4 */
  .imagenes{ /* Quiere decir 5 columnas 240 pixeles*/
     columns: 6 240px; /*Estos se modifican de acuerdo la pantalla si es mas hancha o no */
     margin: auto;
+    margin-left: 3%;
+    margin-right: 4%;
 }
 .card-image{
     position: relative;
@@ -151,3 +156,29 @@ header nav{
     visibility:hidden;
     display:none;
 }
+/* Nueva actualizacion del codigo */
+@media (max-width: 1200px) {
+    .imagenes{
+        columns: 3 200px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .card-image img{
+        border-radius: 15px;
+        min-width: 180px;
+        max-width: 200px;
+    }
+  }
+
+
+  @media (max-width: 450px) {
+    .imagenes{
+        columns: 2 180px;
+    }
+
+    .card-image img{
+        min-width: 100px;
+        max-width: 180px;
+    }
+  }
